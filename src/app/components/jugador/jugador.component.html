@@ -1,0 +1,16 @@
+<h1 class="text-center mt-4">{{jugador.nombre}}</h1>
+
+<div class="row mt-5 mb-5">
+  <div class="col-lg-6">
+    <img class="img-fluid" [src]="jugador.img" alt="jugador.nombre">
+    <hr>
+    <a [routerLink]="['/jugadores']" class="btn btn-outline-danger btn-block">Regresar</a>
+  </div>
+  <div class="col-lg-6">
+      <p class="pt-3 text-left text-mute">País: {{jugador.nacionalidad}}</p>
+      <p class="pt-1 text-left text-mute">Fecha de Nacimiento: {{jugador.nacimiento | date : "dd/MM/yy" }}</p>
+      <h4 class="pt-2 text-right">{{jugador.biografia}}</h4>
+      <p class="pt-1 text-left text-mute">{{jugador.clubes}}</p>
+  </div>
+
+</div>

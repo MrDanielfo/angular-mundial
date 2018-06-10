@@ -1,0 +1,14 @@
+<h1 class="text-center mt-4">{{edicion.nombre}}</h1>
+
+<div class="row mt-5 mb-5">
+  <div class="col-lg-8">
+    <img class="img-fluid" [src]="edicion.img" alt="edicion.nombre">
+    <hr>
+    <a [routerLink]="['/ediciones']" class="btn btn-outline-danger btn-block">Regresar</a>
+  </div>
+  <div class="col-lg-4">
+      <h3 class="text-center">{{edicion.descripcion}}</h3>
+      <h4 class="pt-3 text-right">{{edicion.caracteristicas}}</h4>
+  </div>
+
+</div>

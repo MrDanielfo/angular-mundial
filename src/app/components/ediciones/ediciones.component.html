@@ -1,0 +1,13 @@
+<div class="card-columns mt-5 animated fadeIn fast">
+    <div class="card" *ngFor="let edicion of ediciones; let i = index;">
+        <img class="card-img-top" [src]="edicion.img" [alt]="edicion.nombre">
+        <div class="card-body">
+          <h5 class="card-title">{{edicion.nombre}}</h5>
+          <p class="card-text"><small class="text-muted">{{edicion.caracteristicas}}</small></p>
+          <button (click)="verEdicion(i)"
+                type="button" class="btn btn-danger btn-block">
+            Ver más
+          </button>
+        </div>
+    </div>
+</div>

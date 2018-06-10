@@ -1,0 +1,25 @@
+<h1 class="text-center py-3">Buscando: <span class="cart-text">{{termino}}</span></h1>
+
+<div class="row animated fadeIn fast" *ngIf="balones.length === 0">
+  <div class="col-md-12">
+    <div class="alert alert-warning" role="alert">
+      No existen resultados con el término {{termino}}
+    </div>
+  </div>
+</div>
+
+<div class="card-columns mt-5 animated fadeIn fast">
+    <div class="card text-center"  *ngFor="let balon of balones" style="width: 18rem;">
+        <img class="card-img-top img-fluid" [src]="balon.img" [alt]="balon.nombre">
+        <div class="card-body">
+          <h5 class="card-title">{{balon.nombre}}</h5>
+          <p class="card-text">{{balon.edicion}}</p>
+          <!--método para ir de ruta en ruta sin pasar por la raiz-->
+          <button (click)="verBalon(balon.idx)"
+                type="button" class="btn btn-danger btn-block">
+            Ver más
+          </button>
+        </div>
+    </div>
+
+</div>

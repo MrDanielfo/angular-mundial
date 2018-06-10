@@ -1,0 +1,18 @@
+<div class="card-columns mt-5 animated fadeIn fast">
+
+    <div class="card text-center" *ngFor="let balon of balones; let i = index" style="width: 18rem;">
+        <img class="card-img-top img-fluid" [src]="balon.img" [alt]="balon.nombre">
+        <div class="card-body">
+          <h5 class="card-title">{{balon.nombre}}</h5>
+          <p class="card-text">{{balon.edicion}}</p>
+          <!--método para ir de ruta en ruta sin pasar por la raiz-->
+          <button (click)="verBalon(i)"
+                type="button" class="btn btn-danger btn-block">
+            Ver más
+          </button>
+        </div>
+    </div>
+
+</div>
+
+

@@ -1,0 +1,15 @@
+<h1 class="text-center mt-4">{{campeon.campeon}}</h1>
+
+<div class="row mt-5 mb-5">
+  <div class="col-lg-8">
+    <img class="img-fluid" [src]="campeon.img" alt="campeon.nombre">
+    <hr>
+    <a [routerLink]="['/campeones']" class="btn btn-outline-danger btn-block">Regresar</a>
+  </div>
+  <div class="col-lg-4">
+      <p class="pt-3 text-right text-mute">Sede: {{campeon.sede}}</p>
+      <h4 class="pt-3 text-right">{{campeon.descripcion}}</h4>
+      <p class="pt-3 text-right text-mute">Subcampeón: {{campeon.subcampeon}}</p>
+  </div>
+
+</div>

@@ -1,0 +1,17 @@
+<div class="card-columns mt-5 animated fadeIn fast">
+
+    <div class="card text-center" *ngFor="let campeon of campeones; let i = index" style="width: 18rem;">
+        <img class="card-img-top img-fluid" [src]="campeon.img" [alt]="campeon.campeon">
+        <div class="card-body">
+          <h5 class="card-title">{{campeon.campeon}}</h5>
+          <p class="card-text">{{campeon.descripcion}}</p>
+          <p class="card-text"><small class="text-muted">Sede: {{campeon.sede}}</small></p>
+          <button (click)="verCampeon(i)"
+                type="button" class="btn btn-danger btn-block">
+            Ver más
+          </button>
+        </div>
+    </div>
+
+</div>
+

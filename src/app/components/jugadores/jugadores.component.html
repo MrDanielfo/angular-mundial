@@ -1,0 +1,17 @@
+<div class="card-columns mt-5 animated fadeIn fast">
+
+    <div class="card text-center" *ngFor="let jugador of jugadores; let i = index" style="width: 18rem;">
+        <img class="card-img-top img-fluid" [src]="jugador.img" [alt]="jugador.nombre">
+        <div class="card-body">
+          <h5 class="card-title">{{jugador.nombre}}</h5>
+          <p class="card-text">País: {{jugador.nacionalidad}}</p>
+          <p class="card-text">Fecha de Nacimiento: {{jugador.nacimiento | date : "dd/MM/yy" }}</p>
+          <p class="card-text"><small class="text-muted">Clubes: {{jugador.clubes}}</small></p>
+          <button (click)="verJugador(i)"
+                type="button" class="btn btn-danger btn-block">
+            Ver más
+          </button>
+        </div>
+    </div>
+
+</div>
